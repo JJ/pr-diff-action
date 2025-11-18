@@ -1,9 +1,23 @@
-# JavaScript Action Template
+# Capture the diff data structure in a PR
 
-This template offers an easy way to get started writing a JavaScript action with TypeScript compile time support, unit testing with Jest and using the GitHub Actions Toolkit.
+This basic action is intended to be used as a first step in a PR. It
+captures and outputs in a data structure the diff, which can be
+checked (in another step) for whatever you want to.
 
-## Getting Started
+## Description
 
-See the walkthrough located [here](https://github.com/actions/toolkit/blob/master/docs/javascript-action.md).
+This is the `action.yml`, hosted in another branch.
 
-In addition to walking your through how to create an action, it also provides strategies for versioning, releasing and referencing your actions.
+
+```
+name: 'Node 12 Template Action'
+description: 'Get started with Node actions'
+author: 'GitHub'
+inputs:
+  myInput:
+    description: 'Input to use'
+    default: 'world'
+runs:
+  using: 'node12'
+  main: 'lib/main.js'
+```
